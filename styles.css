@@ -1,0 +1,540 @@
+body {
+    background-color: #fff;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+}
+body * {
+    box-sizing: border-box;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 1rem 0 1rem;
+    color: #5F656B;
+}
+
+/*Desktop version*/
+@media only screen and (min-width: 768px) {
+    header {
+    max-width: 90%;
+    margin: 0 auto;
+    }
+}
+.header-top-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.fa-java {
+    color: #FF672B;
+}
+.header-text {
+    flex-grow: 1;
+    padding-left: .75em;
+}
+.header-text h4 {
+    margin: 0;
+    font-family: 'Playfair Display',serif;
+    
+}
+.header-text p {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.7rem;
+}
+/* NAVIGATION */
+.menu {
+    margin-top: 10px;
+}
+nav {
+    display: none;
+}
+[name=menu-toggle] {
+    display: none;
+}
+[name=menu-toggle]:checked + nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+nav li {
+    list-style-type: none;
+    margin-bottom: 1em;
+}
+nav .menu-hide {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
+.social-networks {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-around;
+    border-top: 2px #5F656B solid;
+    padding-top: 0.8rem;
+    color: #959ea5;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/*GENERAL SETTINGS*/
+section {
+    display: flex;
+    flex-direction: column;
+    width: calc(100vw - 2rem);
+    margin: 0 1rem;
+    border-bottom: 2px #5F656B solid;
+}
+h1 {
+    font-weight: 100;
+    font-style: italic; 
+    color: #576A7A;     
+    text-align: center;
+}
+.section-icon {
+    color: #FF672B;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 0.8rem;
+    width: 100%;
+}
+
+/*GENERAL SETTINGS Desktop version */
+@media only screen and (min-width: 768px) {
+    section {
+    max-width: 90%;
+    margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 768px) {
+    h1 {
+     font-size: 2.5rem; 
+    }
+}
+@media only screen and (min-width: 768px) {
+    .section-icon {
+        padding-top: 3rem;
+    }
+}
+
+
+/*SECTION WELCOME*/
+.welcome h1 {
+    padding: 0 2.5rem;
+}
+.welcome figure {
+    text-align: center;
+    margin: 0;
+}
+.welcome img {
+    width: 100%;
+}
+.welcome h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    font-style: italic; 
+    color: rgba(87,106,122,1);
+    font-weight: 100;
+}
+.welcome p {
+    color: rgb(62, 63, 65);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 1rem;
+}
+/* WELCOME Desktop version*/
+
+@media only screen and (min-width: 768px) {
+    .welcome h1 {
+        font-size: 2.5rem;
+        font-weight: 50;
+    }
+    .wrapper-for-welcome-figure {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .welcome img {
+        padding: .5rem;
+    }
+    .welcome p {
+        font-size: 0.8rem;
+    }
+}
+
+/*SECTION MESSAGE-BLOGGER*/
+.section.message-blogger {
+    padding: 0 16px;
+    padding-bottom: 1.5rem;
+}
+.message {
+    font-weight: 100;
+    font-size: 1.3rem;
+    font-style: italic; 
+    color: #59738C;     
+    text-align: center; 
+    padding: 1rem;
+}
+.name {
+    color: #59738C;     
+    text-align: center; 
+    font-family: 'Nunito', sans-serif;
+}
+
+/*MESSAGE-BLOGGER Desktop version*/
+@media only screen and (min-width: 768px) {
+    .message {
+        max-width: 60%;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .message {
+        max-width: 600px;
+        font-size: 2.2rem;
+        margin: 0 auto;
+    }
+    .name {
+        font-size: 1.2rem;
+    }
+}
+/*SECTION LATEST RECIPES*/
+.latest-recipes img {
+    width: 100%;
+    height: auto; 
+}
+.image-with-overlay {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+/*LATEST RECIPES Desktop version*/
+@media only screen and (min-width: 768px) {
+    .latest-recipes {
+        max-width: 95%;
+    }
+    .wrapper-for-image-with-overlay {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    font-size: 12px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .wrapper-for-image-with-overlay {
+    font-size: 18px;
+    }
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+.admin-date {
+    font-size: .75em;
+    font-family: 'Nunito', sans-serif;
+    flex-grow: 3;
+}
+.dish-comment {
+    display: flex;
+    flex-direction: column;
+}
+.dish {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: 1.4em;
+    margin-bottom: 8px;
+} 
+.user-activity {
+    border-top: 1px #fff solid;
+    padding-top: 1em;
+    display: flex;
+    align-items: baseline;
+    font-size: .75em;
+    font-family: 'Nunito', sans-serif;
+}
+.write-comment {
+    flex-grow: 1;
+    padding-left: 1.5em;    
+}
+.far.fa-heart {
+    color: #FF672B;
+    font-size: 1rem;
+}
+.latest-recipes {
+    padding-bottom: 3rem;
+}
+
+/* SECTION ABOUT ME*/
+.about-me {
+    display: flex;
+    }
+.about-me h3 {
+    font-weight: 100;
+    font-style: italic; 
+    color: #576A7A; 
+    padding-left: 1rem;
+}
+.about-me img {
+    width: 100vw;
+    margin-left: -1rem;
+}
+.paragraph {
+    color: #576A7A;  
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-size: .75rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.7rem;
+}
+.get-to-know-me {
+    border: 2px solid #FF672B;
+    color: #FF672B;
+    font: Arial,Helvetica,sans-serif;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0);
+    margin: .75rem 0.5rem 2.5rem 1rem;
+    width: 45%;
+    padding: .4rem .6rem;
+}
+.get-to-know-me:hover {
+    background-color: #FF672B;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*ABOUT ME Desktop version*/
+@media only screen and (min-width: 768px) {
+    .wrapper-for-about-me {
+        display: flex;
+    }
+        .about-me img {
+        width: 40%;
+        height: 70%;
+        margin-left: 0;
+        margin-bottom: 4rem;
+    }
+    .wrapper-for-about-me-text {
+      flex-direction: column;
+    }
+    .about-me h3 {
+        font-size: 1.2rem;
+        margin-top: 0;
+    }
+    .paragraph {
+        line-height: 1.2rem;
+        min-width: 70%;
+        }
+    .get-to-know-me {
+        width: 30%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .about-me img {
+        width: 40%;
+        height: 70%;
+    }
+    .about-me h3 {
+        font-size: 1.6rem;
+        margin-top: 0;
+    }
+    .wrapper-for-about-me-text {
+        padding-left: 1rem;
+      }
+    .paragraph {
+        letter-spacing: 0.05;
+        min-width: 80%;
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+    .get-to-know-me {
+        width: 30%;
+        padding: .6rem .4rem;
+        font-size: 1rem;
+    } 
+} 
+@media only screen and (min-width: 1440px) { 
+    .wrapper-for-about-me-text {
+        padding-left: 3rem;
+      }
+    .paragraph {
+        max-width: 60%;
+        line-height: 2rem;
+    }
+}
+
+/* SECTION MRS FROST COOKS */
+.mrs-frost-cooks {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0;
+}
+.wrapper-for-instagram-photos {    
+    width: 100vw;
+    margin-left: -1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px; 
+   }
+.wrapper-for-instagram-photos img {
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+    height: 25vw;
+}
+.show-more {
+    margin: auto;
+    border: 1px solid #FF672B;
+    color: #FF672B;
+    font-family: "times new roman", times, serif;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    width: 40%;
+    padding: .6rem .2rem;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+.show-more:hover {
+    background-color: #FF672B;
+    color: #fff;
+    cursor: pointer;
+}
+/* MRS FROST COOKS Desktop version */
+@media only screen and (min-width: 768px) {
+    .show-more {
+        display: none;
+    }
+    .wrapper-for-instagram-photos {
+        display: flex;
+        justify-content: space-between;
+    }
+    .wrapper-for-instagram-photos img {
+        padding: 1rem;
+        width: 15%;
+        height: 15%;
+    }
+
+/* SECTION DON'T MISS OUT */
+    /*I KNOW THIS IS CHEATING BUT IS IT OK??? */
+.dont-miss-out {
+    border-top: 2px #5F656B solid;
+    color: rgba(87,106,122,1);
+}
+.dont-miss-out p {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 1rem;  
+}
+.dont-miss-out form {
+    text-align: center;
+}
+.email-wrapper {
+    border-bottom: 2px solid #FF672B;
+    width: 90%;
+    margin: 0 auto;
+}
+.email-address {
+    border: 0;
+    color: #59738C;  
+    margin-bottom: .5rem;
+    padding-left: .5rem;
+    width: 90%;
+}
+.email-address:active {
+    border-style: none;
+}
+.suscribe {
+    border: 2px solid #FF672B;
+    color: #FF672B;
+    font-family: 'Playfair Display', serif;
+    background-color: rgba(0, 0, 0, 0);
+    padding: .8rem .6rem;
+    width: 90%;
+    margin-top: 2rem;  
+}
+.suscribe:hover {
+    background-color: #FF672B;
+    color: #fff;
+    cursor: pointer;
+}
+.dont-miss-out .social-networks {
+    display: flex;
+    list-style-type: none;
+    padding-top: 0.8rem;
+    padding-bottom: 2rem;
+    color: #959ea5;
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    border-top: 0;  
+}
+/*DON'T MISS OUT Desktop version */
+@media only screen and (min-width: 768px) {
+    .dont-miss-out form {
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+        width: 100%;
+        max-width: 500px;
+    }
+    .email-wrapper {
+        text-align: center;
+        width: 60%;
+        padding-left: .5rem;
+    }
+    .suscribe {
+        width: 30%;
+        margin-top: 0;
+        padding:.2rem .4rem;
+    }
+    .dont-miss-out .social-networks {
+        width: 10%;
+    }
+
+}
+
+/* FOOTER */
+footer {
+    font-size: .75rem;  
+    color: #59738C;  
+    text-align: center;
+}
+
+/* TO DO NEXT: 
+Border width of image overlay section
+Do horizontal scroll for photos
+Sticky nav bar
+Nav bar
+Email 
+           
