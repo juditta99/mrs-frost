@@ -16,9 +16,7 @@ header {
     padding: 1rem 1rem 0 1rem;
     color: #5F656B;
 }
-/*Desktop version*/
-
-.header-top-row {
+.header-logo {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -41,60 +39,115 @@ header {
     font-family: 'Nunito', sans-serif;
     font-size: 0.7rem;
 }
-
+/*HEADER Desktop version*/
 @media only screen and (min-width: 768px) {
     header {
+        display: flex;
+        flex-direction: row;
         width: 100%;
-        padding: 2rem 5%;
+        padding: 2rem 0 1rem 5%;
         position: fixed;
         top: 0;
         background-color:#fff;
-        z-index: 10;
+        z-index: 10;    
         }
+        header::before {
+            position: absolute;
+            content:"";
+            background-color: #5F656B;
+            height: 2px;
+            bottom: 0;
+            left: 5%;
+            width: 90%;
+    
+        }
+    .header-logo {
+        display: flex;
+        flex-grow: 1;
+    }
+    .header-text {
+        flex-grow: 0;
+    }
+    .header-text h4 {
+        font-size: 1.5rem;
+    }
+    .fa-java {
+        font-size: 3em;
+    }
+    
 }
-/* NAVIGATION */
-.menu {
-    margin-top: 10px;
-}
-nav {
-    display: none;
-}
-[name=menu-toggle] {
-    display: none;
-}
-[name=menu-toggle]:checked + nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-nav li {
-    list-style-type: none;
-    margin-bottom: 1em;
-}
-nav .menu-hide {
-    position: fixed;
-    top: 1em;
-    right: 1em;
-}
-.social-networks {
-    display: flex;
-    width: 100%;
-    list-style-type: none;
-    justify-content: space-around;
-    border-top: 2px #5F656B solid;
-    padding-top: 0.8rem;
-    color: #959ea5;
-    padding-left: 0;
-    margin-bottom: 0;
-}
+ /* Navigation */
+    .menu {
+        margin-top: 10px;
+    }
+    nav {
+        display: none;
+    }
+    [name=menu-toggle] {
+        display: none;
+    }
+    [name=menu-toggle]:checked + nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    nav li {
+        list-style-type: none;
+        margin-bottom: 1em;
+    }
+    nav .menu-hide {
+        position: fixed;
+        top: 1em;
+        right: 1em;
+    }
+    @media only screen and (min-width: 768px)  {
+        [for=menu-toggle] {
+            display: none;
+        } 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+        nav li {
+           padding-right: 1.5rem;
+           padding-top: 1rem;
+           font-family: 'Nunito', sans-serif;
+           font-size: 1rem;
+           font-weight: 100;
+           color: #959ea5;
+        }
+    }
+    /*Social networks*/
+    .social-networks {
+        display: flex;
+        width: 100%;
+        list-style-type: none;
+        justify-content: space-around;
+        border-top: 2px #5F656B solid;
+        padding-top: 0.8rem;
+        color: #959ea5;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
 
+    /*Social networks - Desktop version*/
+    @media only screen and (min-width: 768px){
+        .social-networks {
+            border-top: 0;
+            padding-right: 5%;
+            justify-content: space-between;
+            max-width: 15%;
+            margin-top: 0;
+        }
+    }
 /*GENERAL SETTINGS*/
 section {
     display: flex;
@@ -438,10 +491,12 @@ h1 {
         display: none;
     }
     .wrapper-for-instagram-photos {
-        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
         display: flex;
         justify-content: space-between;
         overflow: scroll;
+        object-fit: contain;
     }
     .wrapper-for-instagram-photos::-webkit-scrollbar { 
         opacity: 0;
@@ -449,12 +504,9 @@ h1 {
     .wrapper-for-instagram-photos img {
         padding: 0.6rem;
         width: 20%;
-        height: 15%;
-    }
-    .image-with-overlay-instagram {
-        position: relative;
-        margin-bottom: 0.5rem;
-    }
+        height: 150px;
+        }
+    
 }
 /* SECTION DON'T MISS OUT */
 .dont-miss-out {
@@ -553,11 +605,10 @@ footer {
 /* TO DO NEXT: 
 Desktop:
 -Do horizontal scroll for photos
--why doesn´t last photo fill up div on the right?
+-Can you add an overlay to an invisible scrollbar to put arrows on it?
 
 -Header design
+-Is it ok to add margin in % (HEADER)?
 
-
-Comitting to git
-Border width of image overlay section
+-Border width of image overlay section
 */
