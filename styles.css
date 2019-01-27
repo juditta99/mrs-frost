@@ -31,8 +31,7 @@ header {
 }
 .header-text h4 {
     margin: 0;
-    font-family: 'Playfair Display',serif;
-    
+    font-family: 'Playfair Display',serif;  
 }
 .header-text p {
     margin: 0;
@@ -131,11 +130,20 @@ header {
         width: 100%;
         list-style-type: none;
         justify-content: space-around;
-        border-top: 2px #5F656B solid;
+        border-top: 2px #959ea5 solid;
         padding-top: 0.8rem;
-        color: #959ea5;
         padding-left: 0;
         margin-bottom: 0;
+    }
+    .social-networks a {
+        color: #959ea5;
+    }
+    .social-networks a:hover,
+    .social-networks a:focus {
+        color: #FF672B;
+    }
+    .social-networks a:visited {
+        color: #886176;
     }
 
     /*Social networks - Desktop version*/
@@ -375,7 +383,7 @@ h1 {
 .get-to-know-me {
     border: 2px solid #FF672B;
     color: #FF672B;
-    font: Arial,Helvetica,sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 0.8rem;
     background-color: rgba(0, 0, 0, 0);
     margin: .75rem 0.5rem 2.5rem 1rem;
@@ -459,13 +467,23 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px; 
-   }
+}
 .wrapper-for-instagram-photos img {
     object-fit: cover;
     max-height: 100%;
     width: 100%;
     height: 25vw;
 }
+/*.overlay-scrollbar {
+    width: 100vw;
+    height: 200px;
+    margin-left: -1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px; 
+    display: none;
+}*/
+
 .show-more {
     margin: auto;
     border: 1px solid #FF672B;
@@ -490,22 +508,54 @@ h1 {
     .show-more {
         display: none;
     }
+    .mrs-frost-cooks {
+        overflow: hidden;  
+    }
     .wrapper-for-instagram-photos {
         width: 100%;
+        height: 100%;
         margin-left: 0;
         display: flex;
         justify-content: space-between;
-        overflow: scroll;
-        object-fit: contain;
+        overflow-x: scroll;
+        }
+   
+   /* .wrapper-for-instagram-photos::before {
+        height: 150px;
+        width: 100%;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        font-size: 3rem; 
+        color:#576A7A;
+        content: "\f0da";
+        background-color: rgba(47, 0, 255, 0);
+        position: absolute;
+        padding-left: 89%;
+        padding-top: 5%;
+    }
+    .wrapper-for-instagram-photos::after {
+        height: 150px;
+        width: 90%;
+        content: "\f0d9";
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+        font-size: 3rem; 
+        color:#576A7A;  
+        background-color: rgba(47, 0, 255, 0);
+        position: absolute;
+        padding-left: .5%;
+        padding-top: 4%;
     }
     .wrapper-for-instagram-photos::-webkit-scrollbar { 
-        opacity: 0;
-    }
+        background-color: orange;
+        opacity: 1;
+        
+    }*/
     .wrapper-for-instagram-photos img {
         padding: 0.6rem;
         width: 20%;
         height: 150px;
-        }
+    }
     
 }
 /* SECTION DON'T MISS OUT */
@@ -565,6 +615,7 @@ h1 {
     margin: auto;
     border-top: 0;  
 }
+
 /*DON'T MISS OUT Desktop version */
 @media only screen and (min-width: 768px) {
     .dont-miss-out form {
@@ -585,7 +636,7 @@ h1 {
         padding:.2rem .4rem;
     }
     .dont-miss-out .social-networks {
-        width: 10%;
+        width: 15%;
     }
 }
 /* FOOTER */
@@ -602,13 +653,3 @@ footer {
     }
 }
 
-/* TO DO NEXT: 
-Desktop:
--Do horizontal scroll for photos
--Can you add an overlay to an invisible scrollbar to put arrows on it?
-
--Header design
--Is it ok to add margin in % (HEADER)?
-
--Border width of image overlay section
-*/
